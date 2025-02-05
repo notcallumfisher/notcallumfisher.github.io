@@ -1,5 +1,5 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.22 */
+2025.01.17 - 2025.02.04 */
 
 let siteSettings;
 
@@ -15,14 +15,14 @@ window.addEventListener('load', () => {
 			}
 		}
 		// Ads:
-		let toggleAds = document.getElementById('toggleAds');
+		/* let toggleAds = document.getElementById('toggleAds');
 		if (toggleAds) {
 			if (localStorage.getItem('enableAds') === 'true') {
 				toggleAds.innerText = 'Disable Google AdSense for Advertising';
 			} else {
 				toggleAds.innerText = 'Enable Google AdSense for Advertising';
 			}
-		}
+		} */
 		// Comments:
 		let toggleCmts = document.getElementById('toggleCmts');
 		if (toggleCmts) {
@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
 			}
 			location.reload();
 		},
-		toggleAds: () => {
+		/* toggleAds: () => {
 			if (localStorage.getItem('cookiesAccepted') !== 'true') return;
 			let btn = document.getElementById('toggleAds');
 			if (localStorage.getItem('enableAds') === 'true') {
@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
 				btn.innerText = 'Disable Google AdSense for Advertising';
 			}
 			location.reload();
-		},
+		}, */
 		toggleCmts: () => {
 			// if (localStorage.getItem('cookiesAccepted') !== 'true') return;
 			let btn = document.getElementById('toggleCmts');

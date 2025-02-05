@@ -1,5 +1,5 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.25 */
+2025.01.17 - 2025.02.04 */
 
 window.addEventListener('load', () => {
 	if (window.location.pathname.startsWith('/w') || window.location.pathname.startsWith('/m/privacy') || window.location.pathname.startsWith('/m/settings')) return;
@@ -21,14 +21,14 @@ window.addEventListener('load', () => {
 			notice.innerHTML = `<a href="/m/privacy/index.html">Privacy Policy</a>`;
 			footer.appendChild(notice);
 		} // Google AdSense:
-		if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
+		/* if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
 		if (localStorage.enableAds === 'true' && !window.location.pathname.startsWith('/writing')) {
 			let scrpt = document.createElement('script');
 			scrpt.async = true;
 			scrpt.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2986674631207548';
 			scrpt.crossOrigin = 'anonymous';
 			document.head.appendChild(scrpt);
-		}
+		} */
 	}
 	let loadB = () => {
 		// Comments:

@@ -1,5 +1,5 @@
 <!-- Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.27 - 2025.02.04 -->
+2025.02.04 -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -29,32 +29,90 @@
 				display: none;
 			}
 		</style>
-		<title>starswar</title>
+		<title>brain scrap</title>
 		<script defer>
+			let colors = [
+				'yellow',
+				'white',
+				'gray'
+			];
+			let trivia = [
+				'sit down and watch the rain on christmas day (2025.02.04)',
+				'there are strange people in my backyard (2025.02.04)',
+				'i catch my shadow and all its rough edges (2025.02.02)',
+				'sugarcanes and icecubes (2025.02.01)',
+				'does anyone remember my name? i\'m. no i\'m (2025.02.01)',
+				'pouring my empty glass into my water jug (2025.01.30)',
+				'you\'re just the ticket i need to feel free right now (2025.01.30)',
+				'i appeared in a billion searches this week and they were all mine (2025.01.30)',
+				'well if the sun is going to die you should do everything you want to and more (2025.01.29)',
+				'well if the sun is going to die you shouldn\'t bother doing anything (2025.01.29)',
+				'my disappointment is measurable and i feel fine (2025.01.30)',
+				'congratulations, i\'m single (2025.01.30)',
+				'17 days have passed since tuesday (2025.01.27)',
+				'i\'m pulling out of the race to join a new one (2025.01.30)',
+				'so you went to all the book stores and you didn\'t buy any books (2025.01.27)',
+				'Whoops, it was all a dream. Don\'t panic. (2025.01.20)',
+				'roses aren\'t what they used to be (2022.05.18)',
+				'he won\'t tell me what\'s wrong (2025.02.04)',
+				'exolistence (2025.01.14)',
+				'do you feel stupid? (2025.02.04)',
+				'Looking for a way up - Which way is up? (2025.01.08)',
+				'i\'m a repository of things beyond your wildest dreams. i\'m an idiot (2025.01.03)',
+				'ten years ago is always changing, obviously (2024.12.22)',
+				'i found someone who cares and they share my name (2025.01.27)',
+				'nightly word: foxes (2024.08.18)',
+				'nightly word: ghosts (2024.08.18)',
+				'chicken (2025.02.04)',
+				'nightly word: candles (2024.08.18)',
+				'time: find it, fill it, bide it (2025.02.04)',
+				'living gives me superpowers. my superpower is living (2025.02.04)',
+				'\'this is ridiculous,\' said the cow to the dog (2025.02.04)',
+				'let the world know i love it (2025.02.04)',
+				'which way do you want to go? just point (2025.02.04)',
+				'shallow (2025.02.04)',
+				'You\'re hysterical (2025.02.04)',
+				'keep talking to me (2025.02.04)',
+				'even if you could escape, you\'d still have to choose to do it (2025.02.04)',
+				'Hello! Welcome to tonight\'s show. In this episode, we are going to give televisions to strangers, so they can watch us give televisions to strangers in the next episode.'
+			];
+			let done = false;
 			let ranNum = (min, max) => {
 				return Math.floor(Math.random() * (max - min) + min);
 			}
+			let revealText = (text, element) => {
+				//element = document.getElementById(element);
+				element.innerText = '...';
+				let i = -1;
+				// if (revealTextInt) clearInterval(revealTextInt);
+				let revealTextInt = setInterval(() => {
+					i ++;
+					element.innerHTML += text.charAt(i);
+					if (i === text.length) {
+						element.innerHTML = text;
+						clearInterval(revealTextInt);
+					}
+				}, 20);
+				return 120 * text.length; // (20 * text.length)
+			}
 			let doTheThing = () => {
 				let e = document.querySelectorAll('marquee');
-				e.forEach(laser => {
-					laser.innerText = 'pew'
-					let a = [
-						'blue',
-						'green',
-						'gray',
-						'red'
-					];
-					laser.style.color = a[Math.floor(Math.random() * a.length)];
-					laser.direction = Math.random() < 0.50 ? 'left' : 'right';
-					laser.scrollAmount = ranNum(30, 200);
+				e.forEach(msg => {
+					if (done && Math.random() < 0.50) return;
+					revealText(trivia[ranNum(0, trivia.length)], msg);
+					msg.style.color = colors[ranNum(0, colors.length)];
+					msg.direction = Math.random() < 0.50 ? 'left' : 'right';
+					msg.scrollAmount = ranNum(8, 14);
 				});
+				if (!done) done = true;
 			}
 			window.addEventListener('load', doTheThing);
+			setInterval(doTheThing, 10000);
 		</script>
 	</head>
 	<body>
-		<p id="laser">stars war</p>
-		<noscript><h2>postponed for dinner</h2></noscript>
+		<p>brain scrap</p>
+		<noscript><h2>on tea break</h2></noscript>
 		<div class="themarqueedivision">
 			<marquee behavior="scroll" direction="right" scrollamount="1"> 
                 *
@@ -72,23 +130,23 @@
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+            <marquee direction="right" scrollamount="1"> 
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+            <marquee direction="right" scrollamount="1"> 
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="left" scrollamount="4"> 
+            <marquee direction="left" scrollamount="4"> 
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+            <marquee direction="right" scrollamount="1"> 
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="left" scrollamount="3"> 
+            <marquee direction="left" scrollamount="3"> 
                 *
             </marquee>
             <br>
@@ -100,7 +158,7 @@
                 *
             </marquee>
             <br>
-            <marquee behavior="scroll" direction="right" scrollamount="3"> 
+            <marquee behavior="scroll" direction="right" scrollamount=""> 
                 *
             </marquee>
 			<marquee behavior="scroll" direction="left" scrollamount="1"> 
