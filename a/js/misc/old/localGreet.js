@@ -1,4 +1,4 @@
-/* Copyright (©) 2024 Callum Fisher - cf.fisher.bham@gmail.com
+/* Copyright (©) 2024 Callum Fisher - fishercallum@proton.me
 localGreet.js - Provides greetings according to local timezone.
 2024.08.21 - 2024.08.23 */
 

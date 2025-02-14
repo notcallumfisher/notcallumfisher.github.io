@@ -1,5 +1,5 @@
-/* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.02.04 */
+/* Copyright (©) 2025 Callum Fisher - fishercallum@proton.me
+2025.01.17 - 2025.02.06 */
 
 window.addEventListener('load', () => {
 	if (window.location.pathname.startsWith('/w') || window.location.pathname.startsWith('/m/privacy') || window.location.pathname.startsWith('/m/settings')) return;
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let msg = document.createElement('p');
-		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a href="/m/privacy/index.html">privacy page</a>.';
+		msg.innerHTML = 'This page uses cookies to analyze site usage. For more information, see the <a href="/m/privacy/index.html">privacy page</a>.';
 		banner.appendChild(msg);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');

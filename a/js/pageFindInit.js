@@ -1,4 +1,4 @@
-/* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
+/* Copyright (©) 2025 Callum Fisher - fishercallum@proton.me
 2025.01.14 */
 
 window.addEventListener('load', () => {

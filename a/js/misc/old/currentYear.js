@@ -1,4 +1,4 @@
-/* Copyright (©) 2024 Callum Fisher - cf.fisher.bham@gmail.com
+/* Copyright (©) 2024 Callum Fisher - fishercallum@proton.me
 currentYear.js - For updating years to the current year.
 2024.08.12 - 2024.08.21 */
 
