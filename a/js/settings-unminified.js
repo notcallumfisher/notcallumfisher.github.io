@@ -1,4 +1,4 @@
-/* Copyright (©) 2025 Callum Fisher - fishercallum@proton.me
+/* Copyright (©) 2025 callum fisher - fishercallum@proton.me
 2025.01.17 - 2025.02.04 */
 
 let siteSettings;

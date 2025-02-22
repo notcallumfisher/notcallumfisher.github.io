@@ -1,4 +1,4 @@
-/* Copyright (©) 2024-2025 Callum Fisher - fishercallum@proton.me
+/* Copyright (©) 2024-2025 callum fisher - fishercallum@proton.me
 2024.08.26 - 2025.01.25 */
 
 window.addEventListener('load', () => {

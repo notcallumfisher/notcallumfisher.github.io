@@ -2,7 +2,7 @@
 My website.
 
 ## Licensing
-Copyright (©) 2019-2025 Callum Fisher. Third-party content remains the property of its respective owners.
+Copyright (©) 2019-2025 callum fisher. Third-party content remains the property of its respective owners.
 
 ### Source Code
 Licensed under the [MIT License](https://opensource.org/licenses/MIT).

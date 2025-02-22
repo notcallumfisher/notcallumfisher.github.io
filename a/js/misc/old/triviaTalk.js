@@ -1,4 +1,4 @@
-/* Copyright (©) 2024 Callum Fisher - fishercallum@proton.me
+/* Copyright (©) 2024 callum fisher - fishercallum@proton.me
 triviaTalk.js - For providing trivia and holiday messages.
 2024.08.09 - 2024.08.18 */
 

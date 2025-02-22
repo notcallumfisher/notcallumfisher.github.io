@@ -1,4 +1,4 @@
-/* Copyright (©) 2024 Callum Fisher - fishercallum@proton.me
+/* Copyright (©) 2024 callum fisher - fishercallum@proton.me
 myAge.js - For updating ages to my current age.
 2024.08.11 - 2024.08.21 */
 
