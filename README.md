@@ -2,7 +2,7 @@
 My website.
 
 ## Licensing
-Copyright (©) 2019-2025 callum fisher. Third-party content remains the property of its respective owners.
+Copyright (©) 2025 callum fisher. Third-party content remains the property of its respective owners.
 
 ### Source Code
 Licensed under the [MIT License](https://opensource.org/licenses/MIT).
@@ -15,10 +15,6 @@ See the respective [LICENSE_SOURCE.txt](https://github.com/cffisher/cffisher.git
 ### Third-party Content & Services
 
 Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://fonts.google.com/specimen/Roboto) are licensed under the [SIL OPEN FONT LICENSE Version 1.1](https://openfontlicense.org/open-font-license-official-text/).
-
-[Pagefind](https://github.com/CloudCannon/pagefind) search is licensed under the [MIT License](https://github.com/CloudCannon/pagefind/blob/main/LICENSE).
-
-[Microsoft Clarity](https://clarity.microsoft.com/) is used for tracking website usage and user behavior. For more information, please refer to [privacy page](https://cffisher.github.io/m/privacy/index.html).
 
 ## Directories
 
@@ -33,4 +29,10 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 
 ### /t/ - tech
 
-## /m/ - meta
+### /m/ - meta
+
+### /i/ - images
+
+### /s/ - sound
+
+### /all/ - all index

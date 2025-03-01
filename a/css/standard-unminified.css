@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - fishercallum@proton.me
-2024.08.09 - 2025.01.27 */
+2024.08.09 - 2025.02.24 */
 
 /* Fonts */
 
@@ -81,8 +81,8 @@ main {
 	padding-left: 20%;
 	padding-right: 20%;
 
-	animation-name: fadeIn;
-	animation-duration: 1s;
+	/*animation-name: fadeIn;
+	animation-duration: 1s;*/
 
 }
 
@@ -94,7 +94,7 @@ main {
 	color: black;
 
 	word-wrap: break-word;
-	text-align: center;
+	text-align: left;
 	overflow: hidden;
 
 	padding: 2rem;
@@ -107,8 +107,8 @@ main {
 
 }
 
-.box.nocenter { /* Don't center this box's text */
-	text-align: left;
+.box.center {
+	text-align: center;
 }
 
 .box.homely {
