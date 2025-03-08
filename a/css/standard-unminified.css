@@ -489,7 +489,7 @@ ul li {
 	/* Hyperlinks */
 	
 	body a:not(.button) {
-		color: wheat;
+		color: #f5deb3;
 	}
 	
 	body a:not(.button):hover { /* not .button - don't affect hyperlinks within buttons */
@@ -497,7 +497,7 @@ ul li {
 	}
 	
 	body a:not(.button):visited {
-		color: wheat
+		color: wheat;
 	}
 
 	/* Box */
