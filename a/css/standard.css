@@ -1,1 +1,602 @@
-@font-face{font-family:"Dosis";src:url(../f/Dosis/Dosis-Regular.ttf);font-display:swap}@font-face{font-family:"Roboto";src:url(../f/Roboto/static/Roboto-Regular.ttf);font-display:swap}@keyframes icy{0%{background:#f0f0f0;box-shadow:0 0 40px rgb(180 210 255 / .6)}50%{background:#b4d2ff}100%{background:#f0f0f0;box-shadow:0 0 40px rgb(180 210 255 / .6)}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}html{font-family:"Dosis";font-size:1rem}body{color:#000;background-color:#fff;margin:0}q{font-style:italic}main{color:#d2d2d2;box-sizing:border-box;border-radius:1%;display:grid;gap:.5rem;padding-top:.5rem;padding-bottom:.5rem;padding-left:20%;padding-right:20%}.box{background:#fff;color:#000;word-wrap:break-word;text-align:left;overflow:hidden;padding:2rem;box-sizing:border-box}.box.center{text-align:center}.box.homely{font-family:"Dosis"}.box.homely article{font-family:"Dosis"}article{font-family:"Roboto";font-size:1rem;text-align:left}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.3rem}a:not(.button){color:#000}a:not(.button):hover{color:#dcdcdc}a:not(.button):visited{color:brown}footer{text-align:center}.button{color:#000;display:inline-block;margin:.5rem;padding:.6rem;text-align:center;border-radius:5px;text-decoration:none;user-select:none;transition:transform 0.3s,background-color 0.3s;width:auto;max-width:none}.button.icy{color:#000;animation:icy 14s infinite alternate}.button:hover{background:#000;color:#fff;animation:none;transition:background-color 0.1s}.button.background{background:#000;color:#fff}.button.background:hover{background:wheat;color:#000;transition:background-color 0.1s}.box .button{margin-right:10px;margin-bottom:10px}.button.inactive{color:gray;cursor:not-allowed}.button.inactive:hover{background:#000;color:gray}.button.secondary{float:right}.button.selectable{-moz-user-select:-moz-all;-khtml-user-select:all;-webkit-user-select:all;-ms-user-select:all;user-select:all}.navbar{background:wheat;padding:5px 10%;border-bottom-right-radius:5px;border-bottom-left-radius:5px;border-bottom:gray ridge;border-width:1px;display:flex;align-items:center;justify-content:space-between}.hamburger-checkbox{display:none}.hamburger{color:#000;display:none;font-size:1.5rem;cursor:pointer;padding:.5rem;margin-right:1rem}.menu-items{display:flex;align-items:center;justify-content:space-between;width:100%}@media screen and (max-width:800px){.hamburger{display:block}.menu-items{display:none;flex-direction:column;gap:10px;padding:10px;width:100%;box-sizing:border-box;margin:0 auto}.hamburger-checkbox:checked+.hamburger+.menu-items{display:flex}.primary-buttons,.secondary-buttons{display:flex;flex-direction:column;align-items:flex-start;width:100%;box-sizing:border-box;padding-right:1rem}.menu-items a{display:block;width:100%;text-align:left;padding:.8rem 1rem;box-sizing:border-box;border-radius:5px}}@media screen and (min-width:801px){.hamburger{display:none}}@media screen and (max-width:1400px){main{padding-left:0;padding-right:0}.navbar{padding-left:0;padding-right:0}}img{padding:1rem;max-width:100%;display:block;margin-left:auto;margin-right:auto;box-sizing:border-box;filter:drop-shadow(0 0 4px black)}figure{display:block;text-align:center;margin:0 auto;max-width:100%}body{--pagefind-ui-font:Roboto;--pagefind-ui-primary:white;--pagefind-ui-text:black;--pagefind-ui-background:white;--pagefind-ui-border:white}.cookieBanner{background:wheat;color:#000;position:fixed;bottom:0;left:0;width:100%;text-align:center;padding:15px;z-index:9999;display:block;overflow-wrap:break-word;white-space:normal;box-sizing:border-box}.cookieBanner .button:hover{background:#fff;color:#000}hr{color:#000}.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.hidden{display:none}ul li{padding-top:.2rem;padding-bottom:.2rem}@media (prefers-color-scheme:dark){body{background:#000;color:#fff;--pagefind-ui-font:Roboto;--pagefind-ui-primary:black;--pagefind-ui-text:white;--pagefind-ui-background:black;--pagefind-ui-border:black}body a:not(.button){color:wheat}body a:not(.button):hover{color:#dcdcdc}body a:not(.button):visited{color:wheat}body .box{background:#000;color:#fff}body .navbar{background:#000}body .button{color:#fff}body .button.background{background:wheat;color:#000}body .button.background:hover{background:#fff;color:#000}body .button:hover{background:wheat;color:#000}body .button.inactive{background:#000;color:gray;cursor:not-allowed}body .button.inactive:hover{background:#000;color:gray}body .hamburger{color:#fff}.cookieBanner{background:#fff;color:#000}.cookieBanner .button{color:#000}.cookieBanner .button.background{background:#000;color:#fff}.cookieBanner .button.background:hover{background:wheat;color:#000}.cookieBanner .button:hover{background:wheat;color:#000}.cookieBanner a:not(.button){color:#000}.cookieBanner a:not(.button):hover{color:#000}.cookieBanner a:not(.button):visited{color:#000}body hr{color:#000}}
+/* Copyright (©) 2024-2025 Callum Fisher - fishercallum@proton.me
+2024.08.09 - 2025.03.13 */
+
+/* Fonts */
+
+@font-face {
+	font-family: "Dosis";
+	src: url("../f/Dosis/Dosis-Regular.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../f/Roboto/static/Roboto-Regular.ttf");
+	font-display: swap;
+}
+
+/* Animations */
+
+/* Christmas "Icy" Button Theme: */
+
+@keyframes icy {
+	0% {
+		background: rgb(240, 240, 240); /* light icy white */
+		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
+	}
+	50% {
+		background: rgb(180, 210, 255); /* soft icy blue */
+		
+	}
+	100% {
+		background: rgb(240, 240, 240); /* light icy white */
+		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Standard */
+
+html {
+	font-family: "Dosis";
+	font-size: 1rem;
+}
+
+body {
+	color: black;
+	background-color: white;
+	margin: 0;
+}
+
+q {
+	font-style: italic;
+}
+
+/* Main Content Div - Contains .box div */
+
+main {
+
+	color: rgb(210, 210, 210);
+
+	box-sizing: border-box;
+	border-radius: 1%;
+	display: grid;
+	gap: 0.5rem;
+
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 20%;
+	padding-right: 20%;
+
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
+
+}
+
+/* Box div - Contains text/image/article content */
+
+.box {
+
+	background: white;
+	color: black;
+
+	word-wrap: break-word;
+	text-align: left;
+	overflow: hidden;
+
+	padding: 2rem;
+
+	/*border-radius: 10px;
+	border-bottom: gray ridge;
+	border-width: 1px;*/
+
+	box-sizing: border-box;
+
+}
+
+.box.center {
+	text-align: center;
+}
+
+.box.homely {
+	font-family: "Dosis";
+}
+
+.box.homely article {
+	font-family: "Dosis";
+}
+
+/* Articles */
+
+article {
+	font-family: "Roboto";
+	font-size: 1rem;
+	text-align: left;
+}
+
+/* Headings */
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+/* Hyperlinks */
+
+a:not(.button) {
+	color: black;
+}
+
+a:not(.button):hover { /* not .button - don't affect hyperlinks within buttons */
+	color: rgb(220, 220, 220);
+}
+
+a:not(.button):visited {
+	color: brown;
+}
+
+/* Footer */
+
+footer {
+	text-align: center;
+}
+
+/* Regular (non-background) Buttons */
+
+.button {
+
+	color: black;
+
+	display: inline-block; /* Allow buttons to sit next to each other */
+	margin: 0.5rem; /* Space between buttons */
+	padding: 0.6rem; /* Padding for button content */
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none;
+	user-select: none;
+	transition: transform 0.3s, background-color 0.3s;
+	width: auto; /* Let buttons size automatically */
+	max-width: none; /* Prevent fixed max-width */
+}
+
+/* Special Buttons */
+
+.button.icy {
+	color: black;
+	animation: icy 14s infinite alternate; /* 14 seconds per cycle, alternate directions */
+}
+
+.button:hover {
+
+	background: black;
+	color: white;
+
+	animation: none; /* Cancel any animations (from themes) */
+	transition: background-color 0.1s;
+
+}
+
+/* Regular Buttons (with background) */
+
+.button.background {
+	background: black;
+	color: white;
+}
+
+.button.background:hover {
+	background: wheat;
+	color: black;
+	transition: background-color 0.1s;
+}
+
+/* Buttons in Box divs */
+
+.box .button {
+	margin-right: 10px; /* Add spacing between buttons horizontally */
+	margin-bottom: 10px; /* Space between buttons vertically (if they wrap) */
+}
+
+/* General Button Stuff */
+
+.button.inactive {
+	color: gray;
+	cursor: not-allowed;
+}
+
+.button.inactive:hover {
+	background: black;
+	color: gray;
+}
+
+.button.secondary {
+	float: right;
+}
+
+.button.selectable { /* Can highlight content */
+	-moz-user-select: -moz-all;
+	-khtml-user-select: all;
+	-webkit-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}
+
+/* Navbar container */
+
+.navbar {
+
+	background: wheat;
+
+	padding: 5px 10%;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: gray ridge;
+	border-width: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+/* Hide the checkbox input */
+
+.hamburger-checkbox {
+	display: none;
+}
+
+/* Label for the hamburger icon - show only on smaller screens */
+
+.hamburger {
+
+	color: black;
+
+	display: none; /* Hidden by default on wide screens */
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 0.5rem;
+	margin-right: 1rem;
+
+}
+	
+/* Default menu items container */
+
+.menu-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/* Responsive styling for screens smaller than 800px */
+
+@media screen and (max-width: 800px) {
+
+	/* Make sure the hamburger icon is shown on smaller screens */
+
+	.hamburger {
+		display: block; /* Show hamburger icon */
+	}
+	
+	/* Stack menu items vertically when the menu is open */
+
+	.menu-items {
+		display: none;
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px;	/* Adjust padding to add space inside the container */
+		width: 100%;
+		box-sizing: border-box; /* Prevent overflow */
+		margin: 0 auto; /* Center the menu within the screen */
+	}
+
+	/* Show the menu items when the checkbox is checked */
+
+	.hamburger-checkbox:checked + .hamburger + .menu-items {
+		display: flex;
+	}
+
+	/* Stack primary and secondary buttons vertically inside the menu */
+
+	.primary-buttons,
+	.secondary-buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; /* Align buttons to the left */
+		width: 100%; /* Ensure buttons take full width inside the menu */
+		box-sizing: border-box; /* Prevent overflow */
+		padding-right: 1rem;
+	}
+
+	/* Stretch links (buttons) to take up 100% of the menu width */
+	.menu-items a {
+		display: block; /* Make sure the buttons stack vertically */
+		width: 100%; /* Ensure links span the full width of the menu */
+		text-align: left;
+		padding: 0.8rem 1rem;
+		box-sizing: border-box; /* Include padding and border in element's total width */
+		border-radius: 5px;
+	}
+}
+
+/* Keep hamburger icon hidden on larger screens */
+
+@media screen and (min-width: 801px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	main {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* Images */
+
+img {
+	padding: 1rem;
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 0px 4px black);
+}
+
+/* Figures for Images */
+
+figure {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+/* iframes */
+
+/* iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+} */
+
+/* Custom Pagefind Search Styling */
+
+body {
+	--pagefind-ui-font: Roboto;
+	--pagefind-ui-primary: white;
+	--pagefind-ui-text: black;
+	--pagefind-ui-background: white;
+	--pagefind-ui-border: white;
+	/* --pagefind-ui-tag: brown; */
+}
+
+/* Cookie Consent Banner */
+
+.cookieBanner {
+
+	background: wheat;
+	color: black;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+	z-index: 9999;
+	display: block;
+	/* animation: fadeIn 1s ease; */
+	overflow-wrap: break-word;
+	white-space: normal; /* Prevent text from staying on one line */
+	box-sizing: border-box; /* Ensures padding is included within width */
+
+}
+
+.cookieBanner .button:hover {
+	background: white;
+	color: black;
+}
+
+/* Misc. */
+
+hr {
+	color: black;
+}
+
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Tables */
+
+/* table {
+	text-align: center;
+	padding: 1rem;
+}
+
+th, tr {
+	text-align: center;
+	padding: 1rem;
+} */
+
+/* Lists */
+
+ul li {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+/* Dark Theme */
+
+@media (prefers-color-scheme: dark) {
+
+	/* Body */
+	
+	body {
+	
+		background: black;
+		color: white;
+	
+		/* Pagefind Search */
+	
+		--pagefind-ui-font: Roboto;
+		--pagefind-ui-primary: black;
+		--pagefind-ui-text: white;
+		--pagefind-ui-background: black;
+		--pagefind-ui-border: black;
+	
+	}
+	
+	/* Hyperlinks */
+	
+	body a:not(.button) {
+		color: #f5deb3;
+	}
+	
+	body a:not(.button):hover { /* not .button - don't affect hyperlinks within buttons */
+		color: rgb(220, 220, 220);
+	}
+	
+	body a:not(.button):visited {
+		color: wheat;
+	}
+
+	/* Box */
+	
+	body .box {
+		background: black;
+		color: white;
+	}
+
+	/* Navbar */
+
+	body .navbar {
+		background: black;
+	}
+	
+	body .button {
+		color: white;
+	}
+
+	/* Buttons */
+
+	body .button.background {
+		background: #f5deb3;
+		color: black;
+	}
+	
+	body .button.background:hover {
+		background: white;
+		color: black;
+	}
+
+	body .button:hover {
+		background: wheat;
+		color: black;
+	}
+
+	body .button.inactive {
+		background: black;
+		color: gray;
+		cursor: not-allowed;
+	}
+
+	body .button.inactive:hover {
+		background: black;
+		color: gray;
+	}
+
+	/* Navbar Hamburger Button */
+
+	body .hamburger {
+		color: white;
+	}
+
+	/* Cookie Consent Banner */
+
+	.cookieBanner {
+		background: white;
+		color: black;
+	}
+
+	.cookieBanner .button {
+		color: black;
+	}
+
+	.cookieBanner .button.background {
+		background: black;
+		color: white;
+	}
+
+	.cookieBanner .button.background:hover {
+		background: #f5deb3;
+		color: black;
+	}
+
+	.cookieBanner .button:hover {
+		background: #f5deb3;
+		color: black;
+	}
+
+	.cookieBanner a:not(.button) {
+		color: black;
+	}
+	
+	.cookieBanner a:not(.button):hover {
+		color: black;
+	}
+	
+	.cookieBanner a:not(.button):visited {
+		color: black;
+	}
+ 
+	/* Misc. */
+	
+	body hr {
+		color: black;
+	}
+
+}

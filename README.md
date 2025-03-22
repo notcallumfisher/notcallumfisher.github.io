@@ -25,11 +25,7 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 - /a/img - Images/GIF
 - /a/f - fonts
 
-### /w/ - writing
-
 ### /t/ - tech
-
-### /m/ - meta
 
 ### /i/ - images
 

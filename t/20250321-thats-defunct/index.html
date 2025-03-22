@@ -1,0 +1,110 @@
+<!-- Copyright (©) 2025 callum fisher - fishercallum@proton.me
+2025.03.21 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style>
+			body {
+				background: black;
+				color: white;
+				margin: 0;
+			}
+			h2 {
+				padding: 1rem;
+			}
+			p {
+				font-size: 6rem;
+				color: white;
+				margin: 0;
+				padding-top: 1rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+				max-width: 80%;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+			}
+			themarqueedivision {
+				display: none;
+			}
+			marquee {
+				font-size: 10rem;
+			}
+		</style>
+		<title>h0me</title>
+		<script defer>
+			let colors = [
+				'red',
+				'white',
+				'gray'
+			];
+			let lyrics = [
+				'that\'s defunct',
+				'sell eggs'
+			];
+			let done = false;
+			let ranNum = (min, max) => {
+				return Math.floor(Math.random() * (max - min) + min);
+			}
+			let revealText = (text, element) => {
+				//element = document.getElementById(element);
+				element.innerText = '...';
+				let i = -1;
+				// if (revealTextInt) clearInterval(revealTextInt);
+				let revealTextInt = setInterval(() => {
+					i ++;
+					element.innerHTML += text.charAt(i);
+					if (i === text.length) {
+						element.innerHTML = text;
+						clearInterval(revealTextInt);
+					}
+				}, 200);
+				return 120 * text.length; // (20 * text.length)
+			}
+			let shutupdownopen = () => {
+				document.getElementById('shut').innerText = Math.random() < 0.50 ? 'shut' : 'open';
+				document.getElementById('up').innerText = Math.random() < 0.50 ? 'up' : 'down';
+			}
+			let doTheThing = () => {
+				let e = document.querySelectorAll('marquee');
+				e.forEach(msg => {
+					if (done && Math.random() < 0.50) return;
+					revealText(lyrics[ranNum(0, lyrics.length)], msg);
+					msg.style.color = colors[ranNum(0, colors.length)];
+					msg.scrollAmount = ranNum(8, 40);
+				});
+				if (!done) done = true;
+			}
+			window.addEventListener('load', doTheThing);
+			setInterval(shutupdownopen, 800);
+		</script>
+	</head>
+	<body>
+		<p><span id="shut">shut</span> <span id="up">up</span></p>
+		<noscript><h2>on tea break</h2></noscript>
+		<div class="themarqueedivision">
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="alternate" scrollamount="1"> 
+                *
+            </marquee>
+		</div>
+	</body>
+</html>

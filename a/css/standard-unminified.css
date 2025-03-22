@@ -85,8 +85,8 @@ main {
 	padding-left: 20%;
 	padding-right: 20%;
 
-	/*animation-name: fadeIn;
-	animation-duration: 1s;*/
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
 
 }
 
@@ -427,10 +427,10 @@ body {
 
 }
 
-.cookieBanner .button:hover {
+/* .cookieBanner .button:hover {
 	background: white;
 	color: black;
-}
+} */
 
 /* Misc. */
 
@@ -557,7 +557,7 @@ ul li {
 
 	/* Cookie Consent Banner */
 
-	.cookieBanner {
+	/* .cookieBanner {
 		background: white;
 		color: black;
 	}
@@ -591,7 +591,7 @@ ul li {
 	
 	.cookieBanner a:not(.button):visited {
 		color: black;
-	}
+	} */
  
 	/* Misc. */
 	
