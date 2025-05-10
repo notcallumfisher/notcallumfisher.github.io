@@ -1,0 +1,40 @@
+body {
+	/* background-color: rgb(220,220,220); */
+	background-image: url("/media/background_light.jpg");
+	background-position: cover;
+	padding: 0;
+	margin: 0;
+}
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.navbar {
+	border-style: inset;
+	border-color: white;
+	background-color: rgb(220,220,220);
+	overflow: hidden;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.navbar a {
+	float: left;
+	border-style: inset;
+	border-color: black white white;
+	background-color: rgb(0,200,200);
+	color: rgb(255,255,255);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: verdana;
+}
+.navbar a:hover {
+	background-color: rgb(0,200,200);
+	color: black;
+}

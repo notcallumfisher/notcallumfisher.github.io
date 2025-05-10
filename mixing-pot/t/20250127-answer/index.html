@@ -1,0 +1,150 @@
+<!-- Copyright (©) 2025 callum fisher - fishercallum@proton.me
+2025.01.27 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            body {
+	            background: black;
+				margin: 0;
+            }
+           p {
+				float: left;
+				font-size: 6rem;
+				color: white;
+				margin: 0;
+				padding-top: 1rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+				max-width: 80%;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+			}
+			themarqueedivision {
+				display: none;
+			}
+			imgdiv {
+				display: none;
+				padding: 1rem;
+			}
+			img {
+				padding: 1rem;
+				float: right;
+				max-height: 100vh;
+				max-width: 50vh;
+				filter: drop-shadow(0px 0px 1rem orange);
+				box-sizing: border-box;
+			}
+		</style>
+		<title>oh no</title>
+		<script defer>
+			ranNum = (min, max) => {
+				return Math.floor(Math.random() * (max - min) + min);
+				
+			}
+			let no = true;
+			let doTheThing = a => {
+				if (a) no = false;
+				if (no) {
+					console.log('ok');
+					no = false;
+					document.body.style.background='yellow';
+					document.getElementById('noyeah').innerText='oh yeah!!!';
+					document.title='oh yeah';
+					document.getElementById('cat').style.display='block';
+				} else {
+					console.log('okno');
+					no = true;
+					document.body.style.background = 'black';
+					document.getElementById('noyeah').innerText='oh no';
+					document.title='oh no';
+					document.getElementById('cat').style.display='none';
+				}
+				let url = new URL(window.location.href);
+				url.searchParams.set('.', no ? '0' : '1');
+				history.replaceState(null, '', url);
+				elements = document.querySelectorAll('marquee');
+				elements.forEach(element => {
+					element.innerText = no ? 'oh no' : 'oh yeah!!!';
+					let array = [
+						'blue',
+						'green',
+						'gray',
+						'rgb(40, 40, 40)'
+					];
+					element.style.color = no ? array[Math.floor(Math.random() * array.length)] : 'black';
+					element.direction = Math.random() < 0.50 ? 'left' : 'right';
+					element.scrollAmount = no ? ranNum(1, 6) : ranNum(10, 24);
+				});
+			}
+			window.addEventListener('load', () => {
+				console.log('oh yeah');
+				document.addEventListener('click', event => {
+					if (event.target === document.getElementById('cat')) return;
+					console.log('what');
+					doTheThing();
+				});
+				let p = new URLSearchParams(window.location.search);
+				if (p) doTheThing(p.get('.') === '0');
+			});
+		</script><!--overflow-wrap: break-wordoverflow-wrap: break-wordoverflow-wrap: break-wordoverflow-wrap: break-wordoverflow-wrap: break-word-->
+	</head>
+	<body>
+		<p id="noyeah">oh no</p> <!--vh viewport height-->
+		<div class="imgdiv" id="cat"><a href="https://www.pexels.com/photo/tabby-cat-on-white-wooden-fence-804475/"><img src="cat.avif"></a></div>
+		<div class="themarqueedivision">
+			<marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="right" scrollamount="12"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(0, 10, 10)" behavior="scroll" direction="right" scrollamount="10"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: blue" behavior="scroll" direction="left" scrollamount="1"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(80, 80, 80)" behavior="scroll" direction="right" scrollamount="2"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="right" scrollamount="12"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="right" scrollamount="14"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="left" scrollamount="8"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="right" scrollamount="18"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="left" scrollamount="3"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: green;" behavior="scroll" direction="right" scrollamount="4"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: rgb(20, 20, 20)" behavior="scroll" direction="left" scrollamount="2"> 
+                oh yeah!!!
+            </marquee>
+            <br>
+            <marquee style="color: green;" behavior="scroll" direction="right" scrollamount="1"> 
+                oh yeah!!!
+            </marquee>
+		</div>
+		<noscript>
+			<p style="font-size: 100rem">no yeah</p>
+		</noscript>
+	</body>
+</html>

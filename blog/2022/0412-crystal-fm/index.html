@@ -1,0 +1,115 @@
+<!-- Copyright (©) 2022-2025 callum fisher - fishercallum@proton.me
+2022.04.12 - 2025.05.09 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../../../a/css/standard.css"/>
+		<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96"/>
+		<link rel="icon" type="image/svg+xml" href="../../../favicon.svg"/>
+		<link rel="shortcut icon" href="../../../favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png"/>
+		<link rel="manifest" href="../../../site.webmanifest"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Crystal FM was a bot built for playing music in voice channels on Discord. Unlike most Discord music bots at the time, it wasn't intended for on-demand song requests. Instead, it offered easy access to a steady stream of hand-picked songs."/>
+		<title>Crystal FM: A radio-like music bot for Discord | callum fisher</title>
+	</head>
+	<!-- 28/05/2019 -->
+	<body>
+		<div class="navbar" id="top">
+			<input type="checkbox" class="hamburger-checkbox" id="hamburgerToggle"/>
+			<label for="hamburgerToggle" class="hamburger">☰</label>
+			<div class="menu-items" id="menuItems">
+				<div class="primary-buttons">
+					<a class="button" href="../../../index.html">Directory</a>
+				</div>
+				<div class="secondary-buttons">
+					<a class="button secondary" href="../../index.html">See more</a>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="box">
+				<article>
+					<h1>Crystal FM: A radio-like music bot for Discord</h1>
+					<section>
+						<figure>
+							<img src="a/cfm.png" alt="Crystal FM logo">
+							<figcaption>Crystal FM's logo, a green & white play icon</figcaption>
+						</figure>
+					</section>
+					<section id="overview">
+						<h2>Overview</h2>
+						<p>
+							Crystal FM was born out of my love for music across various eras, combined with a desire to share that music with others. It was a radio-like music bot for <a target="_blank" href="https://discord.com/">Discord</a>.
+						</p>
+						<p>
+							Unlike most bots on Discord, which serve on-demand song requests, Crystal FM simply offered easy access to a steady stream of cherry-picked songs.
+						</p>
+						<p>
+							The music Crystal FM played mostly consisted of pop & rock music released between the 1960s and 1990s. It was complemented by a wide range of unique instrumental tracks.
+						</p>
+						<p>
+							These tracks could've been songs I'd heard in movies, on the radio, or anywhere else where music happened to be playing.
+						</p>
+						<p>
+							Crystal FM was primarily used within a group of online friends who enjoyed listening to music together.
+						</p>
+					</section>
+					<hr>
+					<section id="history">
+						<h2>History</h2>
+						<p>
+							At first, Crystal FM was called <b>Wave24R</b> (<b>Wave24 Radio</b>), with the 24 referencing its 24/7 operation. It was accompanied by the <b>Pre70sR (Pre-1970s Radio)</b> bot, which focused on older music that didn't mesh well with Wave24's 80s and 90s tunes. By separating the two services, I could maintain a more consistent listening experience for users.
+						</p>
+						<h3>Development</h3>
+						<p>
+							Crystal FM was written in JavaScript and ran with the server-side runtime environment <a href="https://nodejs.org">Node.js</a>.
+						</p>
+						<p>I hosted Crystal FM on a Dell OptiPlex 780 desktop computer for about a year from 2019, after which it was no longer practical to keep running.</p>
+						<img src="a/w24rr2.png" style="float: right;" alt="'Wave24R (rewrite #2)'">
+						<p>Three iterations of the code powering Crystal FM have been and gone:
+							<ol>
+								<li>
+									<b>Wave24R Discord Bot</b>
+									<p>
+										This version of Wave24R is a modular Discord bot made to represent different "brands" of music bot (such as Crystal FM), built on the idea that I could easily swap out playlists and simply rebrand bots to fit different themes.
+									</p>
+								</li>
+								<li>
+									<b>Wave24R Icecast Server</b>
+									<p>
+										This version of Wave24R was closer to a regular internet radio station. It created an audio livestream to broadcast the music to any client.
+										This worked in parallel with a simple Discord bot I built to listen to the stream (amongst other internet radio stations) in any Discord voice channel.<br>
+										To use it, you simply connected to a voice channel and sent a chat command specifying which station you wanted to listen to.
+									</p>
+								</li>
+								<li>
+									<b>Crystal FM based on "S.A.F.E."</b>
+									<p>
+										This was the final rewrite of Crystal FM. It used a silly idea I came up with called "S.A.F.E." I can't really remember what the acronym stood for, but S.A.F.E. was my template launcher of sorts for a few of my future JavaScript programs and handled the configuration files, offered localization support and other repetitive tasks. It was my equivalent of a game engine for my JS programs. It didn't really stick.
+									</p>
+								</li>
+							</ol>
+						</p>
+					</section>
+					<hr>
+					<section id="epilogue">
+						<h2>Epilogue</h2>
+						<p>If I were to revisit Crystal FM - or work on something similar - I would consider adding some of the features I had planned but never implemented.</p>
+						<p>One idea was a song rating system which would lower or increase the probability of a song playing depending on how current listeners have rated it. This would serve as a sort of global voting system that tries compromises for all listeners in a given voice channel. Other ideas I had planned included the automatic handling of seasonal music during Halloween and Christmas periods.</p>
+						<p>
+							In the end, while I may be biased, I think Crystal FM was good while it lasted. Lots of great music was enjoyed using it, and I consider that a big success.
+						</p>
+					</section>
+				</article>
+			</div>
+		</main>
+	</body>
+	<footer>
+		<p><time itemprop="dateCreated" datetime="2022-04-12">2022.04.12</time> - <time itemprop="dateModified" datetime="2025-01-18">2025.01.18</time></p>
+		<p>Published: 2022.04.12</p>
+		<p><a href="../../../copyright/index.html">Copyright & Licensing</a></p>
+		<script src="../../../a/js/standard.js" defer></script>
+	</footer>
+</html>

@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - fishercallum@proton.me
-2024.08.09 - 2025.03.13 */
+2024.08.09 - 2025.05.09 */
 
 /* Fonts */
 
@@ -82,8 +82,8 @@ main {
 
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 24%;
+	padding-right: 24%;
 
 	animation-name: fadeIn;
 	animation-duration: 0.5s;
