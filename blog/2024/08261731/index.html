@@ -1,0 +1,49 @@
+<!-- callum fisher - 2025.06.09 - 2025.06.23 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../../../a/css/standard.css">
+		<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+		<link rel="manifest" href="../../../site.webmanifest">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>2024.08.26 05:31 pm | callum fisher</title>
+	</head>
+	<body>
+		<main>
+			<nav aria-label="breadcrumbs"><p><a href="../../../index.html">directory</a> / <a href="../../index.html">blog</a> / <a href="../../2024/index.html">2024</a> / <time itemprop="dateCreated" datetime="2024-08-26T17:31:00">2024.08.26 05:31 pm</time></p></nav>
+			<div class="box">
+				<article>
+					<p>
+						My navbar isn't necessarily the same on every page, since each page is uniquely created,
+						that would mean a lot more maintenance if links/navbar button names were ever updated.
+						Instead, I keep a consistent "Directory" button on the left hand side of every single page's navbar,
+						and then I leave the right side for contextual buttons specific to that page. For example, the homepage (Directory) has the Search and About buttons,
+						two things that you may want immediate access to on a homepage.
+					</p>
+					<p>
+						In the category pages (E.G. Software), I still have an About button but also link back to the Directory on the left side of the navbar.
+						In article pages (E.G. Software/article-about-computers), I have a Directory button (left) and a "More on Software" button (right) that links back to the Software category page. The category pages act as sub-Directories of the main Directory page.
+						This means that if a user enters the website via an article, they can quickly reach the Directory, or they can see "More on Software" and see the latest Software articles and the About page.
+						It's not perfect, but it's a good balance between consistency and ease of maintenance for me, given that it's a static website.
+					</p>
+					<p>
+						I set up Pagefind, a client-side search index, so users can search from the homepage for content across all the website's pages.
+						I also set the 404 page to display a search box that automatically searches for the URL path content.
+						This means that if a user tries to mywebsite.com/page-that-does-not-exist, the 404 error page will search for "page-does-not-exist"
+						in an attempt to display some relevant content.
+						This is ideal for situations where outdated hyperlinks reference delete or renamed pages (although they shouldn't).
+						If somebody visits "mywebsite.com/articleAboutCheese" after it was renamed to "anArticleAboutCheese",
+						it will display in the search results of the 404 page.
+					</p>
+				</article>
+			</div>
+		</main>
+		<footer>
+			<script src="../../../a/js/standard.js" defer></script>
+		</footer>
+	</body>
+</html>

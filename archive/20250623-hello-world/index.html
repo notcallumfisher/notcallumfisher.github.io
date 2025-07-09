@@ -1,0 +1,247 @@
+<!-- callum fisher - 2025.06.23 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style>
+			body {
+				background: black;
+				color: white;
+				margin: 0;
+			}
+			h2 {
+				padding: 1rem;
+			}
+			p {
+				font-size: 6rem;
+				color: white;
+				margin: 0;
+				padding-top: 1rem;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+				max-width: 80%;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+			}
+			themarqueedivision {
+				display: none;
+			}
+		</style>
+		<title>hello world</title>
+		<script defer>
+			let colors = [
+				'white',
+				'gray',
+				'red'
+			];
+			let trivia = [
+				'*',
+				'i love you'
+			];
+			let done = false;
+			let ranNum = (min, max) => {
+				return Math.floor(Math.random() * (max - min) + min);
+			}
+			let revealText = (text, element) => {
+				element.innerText = '';
+				let i = -1;
+				// if (revealTextInt) clearInterval(revealTextInt);
+				let revealTextInt = setInterval(() => {
+					i ++;
+					element.innerHTML += text.charAt(i);
+					if (i === text.length) {
+						element.innerHTML = text;
+						clearInterval(revealTextInt);
+					}
+				}, ranNum(20, 800));
+				return 120 * text.length; // (20 * text.length)
+			}
+			let doTheThing = () => {
+				let e = document.querySelectorAll('marquee');
+				e.forEach(msg => {
+					if (done && Math.random() < 0.50) return;
+					revealText(trivia[ranNum(0, trivia.length)], msg);
+					msg.style.color = colors[ranNum(0, colors.length)];
+					msg.direction = Math.random() < 0.50 ? 'left' : 'right';
+					msg.scrollAmount = ranNum(1, 8);
+				});
+				if (!done) done = true;
+			}
+			window.addEventListener('load', doTheThing);
+			setInterval(doTheThing, 10000);
+		</script>
+	</head>
+	<body>
+		<center><h1 style="text-shadow: 0px 0px 14px red; color:red"><i>hi</i></h1></center>
+		<div class="themarqueedivision">
+			<marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="2"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="4"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="3"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="2"> 
+                *
+            </marquee>
+            <br>
+            <marquee behavior="scroll" direction="right" scrollamount=""> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="3"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="2"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="2"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="2"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="3"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="2"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="1"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="2"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="4"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+			<marquee behavior="scroll" direction="right" scrollamount="5"> 
+                *
+            </marquee>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- callum fisher - notcallumfisher@outlook.com 
+2025.07.06 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style>
+			body {
+				background: hotpink;
+				color: white;
+				margin: 0;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				text-align: center;
+			}
+		</style>
+		<title>it's so simple</title>
+		<script defer>
+			window.addEventListener('load', () => {
+				let txt = 'i love you'.split(' ');
+				let total = 0;
+				let delay = 2000;
+				let delayGoal = 100;
+				let a = () => {
+					let count = -1;
+					let addItem = () => {
+						count ++;
+						let body = document.body;
+						let item = document.createElement('p'); 
+						item.innerText = txt[count];
+						body.appendChild(item);
+						if (delay > delayGoal) delay -= 100;
+						if (count !== txt.length - 1) {
+							setTimeout(addItem, delay);
+						} else if (total !== 10) {
+							total ++;
+							setTimeout(a, 600);
+						} else {
+							window.location.replace('file:///home/deck/Documents/a/coding/2019%20-%20Website/archive/20250623-hello-world/index.html');
+						}
+					}
+					addItem();
+				}
+				setTimeout(a, 2000);
+			});
+		</script>
+	</head>
+	<body>
+		<noscript>no</noscript>
+	</body>
+</html>

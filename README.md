@@ -1,16 +1,16 @@
-# fishercallum.github.io
+# notcallumfisher.github.io
 My website.
 
 ## Licensing
 Copyright (©) 2025 callum fisher. Third-party content remains the property of its respective owners.
 
 ### Source Code
-Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+[MIT License](https://opensource.org/licenses/MIT)
 
 ### Text & Images (Content)
 Original text and images licensed under the [Creative Commons BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)
 
-See the respective [LICENSE_SOURCE.txt](https://github.com/cffisher/cffisher.github.io/blob/main/LICENSE_SOURCE.txt) and [LICENSE_CONTENT.txt](https://github.com/cffisher/cffisher.github.io/blob/main/LICENSE_CONTENT.txt) files for more details.
+See the respective [LICENSE_SOURCE.txt](https://github.com/notcallumfisher/notcallumfisher.github.io/blob/main/LICENSE_SOURCE.txt) and [LICENSE_CONTENT.txt](https://github.com/notcallumfisher/notcallumfisher.github.io/blob/main/LICENSE_CONTENT.txt) files for more details.
 
 ### Third-party Content & Services
 
@@ -24,11 +24,3 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 - /a/css - Styles
 - /a/img - Images/GIF
 - /a/f - fonts
-
-### /t/ - tech
-
-### /i/ - images
-
-### /s/ - sound
-
-### /all/ - all index

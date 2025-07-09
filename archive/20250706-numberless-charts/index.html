@@ -1,0 +1,110 @@
+<!-- callum fisher - 2025.07.06 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style>
+			body {
+				background: black;
+				color: white;
+				margin: 0;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				text-align: center;
+			}
+		</style>
+		<title>numberless charts</title>
+		<script defer>
+			window.addEventListener('load', () => {
+				let ranNum = (min, max) => {
+					return Math.floor(Math.random() * (max - min) + min);
+				}
+				let tracks = [
+					['Dawn Penn', 'You Don\'t Love Me', '', 0, '2025.07.06'],
+					['Paul Young', 'Common People', '', 0, '2025.07.06'],
+					['Pulp', 'Common People', '', 0, '2025.07.06'],
+					['David Bowie', 'China Girl', '', 0, '2025.07.06'],
+					['Hall & Oates', 'Maneater', '', 0, '2025.07.06'],
+					['Erasure', 'Sometimes', '', 0, '2025.07.06'],
+					['Robbie Neville', 'C\'est La Vie', '', 0, '2025.07.06'],
+					['Bread', 'Everything I Own', '', 0, '', '2025.07.06'],
+					['Yes', 'Owner of a Lonely Heart', '', 0, '', '2025.07.06'],
+					['T-Pau', 'China in Your Hand', '', 0, '', '2025.07.06'],
+					['The Verve', 'Sonnet', '', 0, '', '2025.07.06'],
+					['Dionne Warwick', 'I\'ll Never Love This Way Again', '', 0, '', '2025.07.06'],
+					['No Doubt', 'Don\'t Speak', '', 0, '', '2025.07.06'],
+					['The Traveling Wilburys', 'Handle with Care', 'Out of the Blue', 1977, '', '2025.07.06'],
+					['Electric Light Orchestra', 'Last Train to London', '', 0, '', '2025.07.06'],
+					['Electric Light Orchestra', 'Birmingham Blues', 'Out of the Blue', 1977, '', '2025.07.06'],
+					['Electric Light Orchestra', 'Big Wheels', 'Out of the Blue', 1977, '', '2025.07.06'],
+					['Electric Light Orchestra', 'Standin\' in the Rain', 'Out of the Blue', 1977, '', '2025.07.06'],
+					['Electric Light Orchestra', 'Sweet Talkin\' Woman', 'Out of the Blue', 1977, 'Irresistable', '2025.07.06'],
+					['Electric Light Orchestra', 'Turn to Stone', 'Out of the Blue', 1977, '', '2025.07.06'],
+					['Jeff Lynne\'s ELO', 'Ain\'t It a Drag', 'alone in the universe', 2015, 'a good song. the music video is pretty memorable too, especially with those chess pieces', '2025.06.28'],
+					['Jeff Lynne\'s ELO', 'Alone in the Universe', 'alone in the universe', 2015, '', '2025.07.06'],
+					['The Bee Gees', 'How Can You Mend a Broken Heart', '', 0, '2025.07.06'],
+					['Michael Jackson', 'The Way You Make Me Feel', '', 0, 'very exciting', '2025.06.28'],
+					['Michael Jackson', 'Thriller', '', 0, '', '2025.07.05'],
+					['Squeeze', 'Tempted', '', 0 ,'one i forgot about for a long time. this is awesome', '2025.06.28'],
+					['bill wurtz', 'the moon is made of cheese (but i can\'t taste it)', '', 0, '', '2025.07.06'],
+					['bill wurtz', 'i\'m a princess', '', 0, '', '2025.07.06'],
+					['bill wurtz', 'the road', '', 0, '', '2025.07.06'],
+					['bill wurtz', 'might quit', '', 0, '', '2025.07.06'],
+					['bill wurtz', 'and the day goes on', '', 2018, '', '2025.07.06'],
+					['The Eagles', 'Desperado', '', 0, '', '2025.07.06'],
+					['The Eagles', 'Hotel California', '', 0, '', '2025.07.06'],
+					['The Beatles', 'Free as a Bird', '', 0, '', '2025.07.06'],
+					['Little River Band', 'Reminiscing', '', 0, '', '2025.07.06'],
+					['Billy Joel', 'Scenes from an Italian Restuarant', '', 0, '', '2025.07.06'],
+					['Billy Joel', 'The River of Dreams', '', 0, '', '2025.07.06']
+				];
+				let listed = [];
+				let getTrack = () => {
+					return tracks[ranNum(0, tracks.length)];
+				}			
+				let a = () => {
+					listed = [];
+					let delay = 500;
+					let count = 0;
+					let bye = 0;
+					document.querySelectorAll('p').forEach(p => {
+						setTimeout(() => {
+							p.remove();
+						}, bye);
+						bye+=10;
+					});
+					document.querySelectorAll('button').forEach(a => a.remove());
+					let addItem = () => {
+						let track = getTrack();
+						if (listed.includes(track)) {
+							setTimeout(addItem, 100); return;
+						}
+						count ++;
+						let p = document.createElement('p');
+						p.innerText = `${track[0]} - ${track[1]}`
+						document.body.appendChild(p);
+						listed.push(track);
+						if (delay > 100) delay -= 100;
+						if (count !== 10) {
+							setTimeout(addItem, delay);
+						} else {
+							console.log('test')
+							let btn = document.createElement('button');
+							btn.textContent = 'more';
+							btn.addEventListener('click', a);
+							document.body.append(btn);
+						}
+					}
+					addItem();
+				}
+				a();
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1><i>numberless charts</i></h1>
+		<noscript>no music</noscript>
+	</body>
+</html>

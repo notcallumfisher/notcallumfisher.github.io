@@ -1,63 +1,6 @@
-/* Copyright (©) 2024-2025 Callum Fisher - fishercallum@proton.me
-2024.08.09 - 2025.05.17 */
-
-/* Fonts */
-
-@font-face {
-	font-family: "Dosis";
-	src: url("../f/Dosis/Dosis-Regular.ttf");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url("../f/Roboto/static/Roboto-Regular.ttf");
-	font-display: swap;
-}
-
-/* Animations */
-
-/* Christmas "Icy" Button Theme: */
-
-@keyframes icy {
-	0% {
-		background: rgb(240, 240, 240); /* light icy white */
-		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
-	}
-	50% {
-		background: rgb(180, 210, 255); /* soft icy blue */
-		
-	}
-	100% {
-		background: rgb(240, 240, 240); /* light icy white */
-		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
+/* callum fisher - 2024.08.09 - 2025.05.17 */
 
 /* Standard */
-
-html {
-	font-family: "Dosis";
-	font-size: 1rem;
-}
 
 body {
 	color: black;
@@ -72,62 +15,37 @@ q {
 /* Main Content Div - Contains .box div */
 
 main {
-
 	color: rgb(210, 210, 210);
-
 	box-sizing: border-box;
 	border-radius: 1%;
 	display: grid;
 	gap: 0.5rem;
-
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
-	padding-left: 20%;
-	padding-right: 20%;
-
-	/* animation-name: fadeIn;
-	animation-duration: 0.5s; */
-
+	padding-left: 24%;
+	padding-right: 24%;
 }
 
 /* Box div - Contains text/image/article content */
 
 .box {
-
 	background: white;
 	color: black;
-
 	word-wrap: break-word;
 	text-align: left;
 	overflow: hidden;
-
 	padding: 2rem;
-
 	/*border-radius: 10px;
 	border-bottom: gray ridge;
 	border-width: 1px;*/
-
 	box-sizing: border-box;
-
 }
 
 .box.center {
 	text-align: center;
 }
 
-.box.homely {
-	font-family: "Dosis";
-}
-
-.box.homely article {
-	font-family: "Dosis";
-}
-
-/* Articles */
-
 article {
-	font-family: "Roboto";
-	font-size: 1rem;
 	text-align: left;
 }
 
@@ -168,9 +86,7 @@ footer {
 /* Regular (non-background) Buttons */
 
 .button {
-
 	color: black;
-
 	display: inline-block; /* Allow buttons to sit next to each other */
 	margin: 0.5rem; /* Space between buttons */
 	padding: 0.6rem; /* Padding for button content */
@@ -178,29 +94,14 @@ footer {
 	border-radius: 5px;
 	text-decoration: none;
 	user-select: none;
-	transition: transform 0.3s, background-color 0.3s;
 	width: auto; /* Let buttons size automatically */
 	max-width: none; /* Prevent fixed max-width */
 }
 
-/* Special Buttons */
-
-.button.icy {
-	color: black;
-	animation: icy 14s infinite alternate; /* 14 seconds per cycle, alternate directions */
-}
-
 .button:hover {
-
 	background: black;
 	color: white;
-
-	animation: none; /* Cancel any animations (from themes) */
-	transition: background-color 0.1s;
-
 }
-
-/* Regular Buttons (with background) */
 
 .button.background {
 	background: black;
@@ -210,7 +111,6 @@ footer {
 .button.background:hover {
 	background: wheat;
 	color: black;
-	transition: background-color 0.1s;
 }
 
 /* Buttons in Box divs */
@@ -280,7 +180,7 @@ footer {
 	margin-right: 1rem;
 
 }
-	
+
 /* Default menu items container */
 
 .menu-items {
@@ -299,7 +199,7 @@ footer {
 	.hamburger {
 		display: block; /* Show hamburger icon */
 	}
-	
+
 	/* Stack menu items vertically when the menu is open */
 
 	.menu-items {
@@ -351,7 +251,7 @@ footer {
 
 @media screen and (max-width: 1400px) {
 	main {
-		padding-left: 0;
+		padding-left: 0.5rem;
 		padding-right: 0;
 	}
 	.navbar {
@@ -392,44 +292,6 @@ figure {
 	border: 0;
 	padding: 1rem;
 	box-sizing: border-box;
-} */
-
-/* Custom Pagefind Search Styling */
-
-body {
-	--pagefind-ui-font: Roboto;
-	--pagefind-ui-primary: white;
-	--pagefind-ui-text: black;
-	--pagefind-ui-background: white;
-	--pagefind-ui-border: white;
-	/* --pagefind-ui-tag: brown; */
-}
-
-/* Cookie Consent Banner */
-
-.cookieBanner {
-
-	background: wheat;
-	color: black;
-
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	padding: 15px;
-	z-index: 9999;
-	display: block;
-	/* animation: fadeIn 1s ease; */
-	overflow-wrap: break-word;
-	white-space: normal; /* Prevent text from staying on one line */
-	box-sizing: border-box; /* Ensures padding is included within width */
-
-}
-
-/* .cookieBanner .button:hover {
-	background: white;
-	color: black;
 } */
 
 /* Misc. */
@@ -474,38 +336,28 @@ ul li {
 @media (prefers-color-scheme: dark) {
 
 	/* Body */
-	
+
 	body {
-	
 		background: black;
 		color: white;
-	
-		/* Pagefind Search */
-	
-		--pagefind-ui-font: Roboto;
-		--pagefind-ui-primary: black;
-		--pagefind-ui-text: white;
-		--pagefind-ui-background: black;
-		--pagefind-ui-border: black;
-	
 	}
-	
+
 	/* Hyperlinks */
-	
+
 	body a:not(.button) {
 		color: #f5deb3;
 	}
-	
+
 	body a:not(.button):hover { /* not .button - don't affect hyperlinks within buttons */
 		color: rgb(220, 220, 220);
 	}
-	
+
 	body a:not(.button):visited {
 		color: wheat;
 	}
 
 	/* Box */
-	
+
 	body .box {
 		background: black;
 		color: white;
@@ -516,7 +368,7 @@ ul li {
 	body .navbar {
 		background: black;
 	}
-	
+
 	body .button {
 		color: white;
 	}
@@ -527,7 +379,7 @@ ul li {
 		background: #f5deb3;
 		color: black;
 	}
-	
+
 	body .button.background:hover {
 		background: white;
 		color: black;
@@ -555,46 +407,8 @@ ul li {
 		color: white;
 	}
 
-	/* Cookie Consent Banner */
-
-	/* .cookieBanner {
-		background: white;
-		color: black;
-	}
-
-	.cookieBanner .button {
-		color: black;
-	}
-
-	.cookieBanner .button.background {
-		background: black;
-		color: white;
-	}
-
-	.cookieBanner .button.background:hover {
-		background: #f5deb3;
-		color: black;
-	}
-
-	.cookieBanner .button:hover {
-		background: #f5deb3;
-		color: black;
-	}
-
-	.cookieBanner a:not(.button) {
-		color: black;
-	}
-	
-	.cookieBanner a:not(.button):hover {
-		color: black;
-	}
-	
-	.cookieBanner a:not(.button):visited {
-		color: black;
-	} */
- 
 	/* Misc. */
-	
+
 	body hr {
 		color: black;
 	}
