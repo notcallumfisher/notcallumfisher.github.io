@@ -1,4 +1,4 @@
-/* callum fisher - 2024.08.09 - 2025.05.17 */
+/* callum fisher - 2024.08.09 - 2025.07.14 */
 
 /* Standard */
 
@@ -15,7 +15,7 @@ q {
 /* Main Content Div - Contains .box div */
 
 main {
-	color: rgb(210, 210, 210);
+	color: black;
 	box-sizing: border-box;
 	border-radius: 1%;
 	display: grid;
@@ -269,7 +269,6 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	filter: drop-shadow(0px 0px 4px black);
 }
 
 /* Figures for Images */

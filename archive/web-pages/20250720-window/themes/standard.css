@@ -1,0 +1,39 @@
+body {
+	background: black;
+}
+
+.infoboard {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(255,0,0);
+	background-color: rgb(20,0,0);
+	text-align: center;
+	color: rgb(255,255,255);
+	word-wrap: break-word;
+	padding: 5%;
+}
+
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* unvisited link */
+a:link {
+	color: rgb(255,255,255);
+}
+/* visited link */
+a:visited {
+	color: rgb(200,200,200);
+}
+/* mouse over link */
+a:hover {
+	color: rgb(100,100,100);
+}
+/* selected link */
+a:active {
+	color: rgb(0,150,150);
+}

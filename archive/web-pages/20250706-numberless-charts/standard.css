@@ -1,0 +1,151 @@
+/* callum fisher - 2024.08.09 - 2025.07.14 */
+
+body {
+	color: #ffffff;
+	background-color: #000000;
+	margin: 0;
+	text-align: center;
+}
+
+main {
+	box-sizing: border-box;
+	border-radius: 1%;
+	display: grid;
+	gap: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 24%;
+	padding-right: 24%;
+}
+
+nav {
+	text-align: left;
+	padding-top: 0.5rem;
+}
+
+h1, h2, h3 {
+	font-style: italic;
+}
+
+.box {
+	background: #000000;
+	color: #ffffff;
+	word-wrap: break-word;
+	text-align: left;
+	overflow: hidden;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.box.center {
+	text-align: center;
+}
+
+q {
+	font-style: italic;
+}
+
+img {
+	padding: 1rem;
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+/* Figures for Images */
+
+figure {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+body a:not(.button) { /* not .button - don't affect hyperlinks within buttons */
+	color: #f5deb3;
+}
+
+body a:not(.button):visited {
+	color: #f5deb3; /* #a52a2a */
+}
+
+body a:not(.button):hover {
+	color: #bfa8ad;
+}
+
+.button {
+	color: white;
+	display: inline-block; /* Allow buttons to sit next to each other */
+	margin: 0.5rem; /* Space between buttons */
+	padding: 0.6rem; /* Padding for button content */
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none;
+	user-select: none;
+	width: auto; /* Let buttons size automatically */
+	max-width: none; /* Prevent fixed max-width */
+    margin-right: 10px; /* Add spacing between buttons horizontally */
+	margin-bottom: 10px; /* Space between buttons vertically (if they wrap) */
+}
+
+.button:hover {
+	background: #f5deb3;
+	color: #000000;
+}
+
+.button.background {
+	background: #000000;
+	color: #ffffff;
+}
+
+.button.background:hover {
+	background: #f5deb3;
+	color: #000000;
+}
+
+/* General Button Stuff */
+
+.button.inactive {
+	color: gray;
+	cursor: not-allowed;
+}
+
+.button.inactive:hover {
+	background: black;
+	color: gray;
+}
+
+.button.secondary {
+	float: right;
+}
+
+.button.selectable { /* Can highlight content */
+	-moz-user-select: -moz-all;
+	-khtml-user-select: all;
+	-webkit-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}
+
+/* lists */
+
+ul li {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+footer {
+	text-align: center;
+}
+@media screen and (max-width: 1400px) {
+	main {
+		padding-left: 0.5rem;
+		padding-right: 0;
+	}
+	.navbar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
